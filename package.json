@@ -17,13 +17,33 @@
     "test": "react-scripts test",
     "test:snapshot": "npm run test -- -u",
     "eject": "react-scripts eject",
-    "test:coverage": "npm run test -- --coverage"
+    "test:coverage": "npm run test -- --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js,jsx,ts,tsx}",
+      "!*/node_modules/",
+      "!*/path/to/dir/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "coverage",
+      "<rootDir>/src/index.js",
+      "<rootDir>/src/reportWebVitals.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   },
   "browserslist": {
     "production": [
@@ -39,7 +59,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "npm run test"
     }
   },
   "devDependencies": {

@@ -54,6 +54,26 @@ describe("common function", () => {
             parValue: 100
         })).toBe(2);
     });
+
+    it('calculateDividendYield: calculate dividend preferred to return null ', () => {
+        expect(calculateDividendYield({
+            type:"Preferred", 
+            lastDividend: 8, 
+            price: 100, 
+            parValue: 100
+        })).toBe(null);
+    });
+
+    it('calculateDividendYield: calculate dividend non identified ', () => {
+        expect(calculateDividendYield({
+            type:"asdf", 
+            lastDividend: 8, 
+            fixedDividend: 2, 
+            price: 100, 
+            parValue: 100
+        })).toBe(null);
+    });
+
     it('calculateDividendYield: calculate dividend ', () => {
         expect(calculateDividendYield({
             type:"Common", 
@@ -76,6 +96,7 @@ describe("common function", () => {
         expect(nthRoot(2333,4)).toBe(6.9499020642692);
         expect(nthRoot(0,4)).toBe(undefined);
         expect(nthRoot(4,2)).toBe(2);
+        expect(nthRoot(-2,3)).toBe(-1.2599210498948732);
     });
     it('getDiffInMinutes: calculate time prev and now time difference ', async () => {
         jest.useFakeTimers();
@@ -84,7 +105,8 @@ describe("common function", () => {
             jest.advanceTimersByTime(1500);
         });
         const dateAndTime2 = new Date();
-        expect(getDiffInMinutes(dateAndTime1, dateAndTime2)).toBe(0)
+        expect(getDiffInMinutes(dateAndTime1, dateAndTime2)).toBe(0);
+        expect(getDiffInMinutes()).toBe(0);
     });
 
     it('filterTradeItem: filter tradeitmes in last 15 min ', async () => {

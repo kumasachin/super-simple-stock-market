@@ -38,6 +38,7 @@ export const getTime = () => {
         dateAndTime: `${date} ${time}`
     }
 }
+
 export const getDiffInMinutes = (dateAndTime1 = new Date(), dateAndTime2 = new Date()) => {
     const timeDiff = Math.round((dateAndTime1.getTime() - dateAndTime2.getTime()) / 60000);
     return Math.abs(timeDiff);

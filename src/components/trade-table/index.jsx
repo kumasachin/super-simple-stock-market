@@ -3,7 +3,7 @@ import React from 'react';
 const Trades = React.memo(({trades}) => {
     const tradeRows = trades ?
         trades.map((trade, index) => {
-            const totalPrice = trade.price && trade.quantity ? (trade.price * trade.quantity) : "-";
+            const totalPrice = trade.price * trade.quantity;
             return (
             <tr data-testid={`trade-row-${index}`} key={`trade-row-${index}`}>
                 <td data-testid={`trade-dateandtime-${index}`}>{trade.dateAndTime}</td>

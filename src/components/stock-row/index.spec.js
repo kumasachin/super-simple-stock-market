@@ -31,6 +31,37 @@ describe("Stocks row snapshot testing", () => {
   });
 });
 
+describe("Stocks row snapshot testing", () => {
+  afterEach(cleanup);
+  const stock = {
+    symbol: "AER",
+    type: "Common",
+    lastDividend: 123,
+    fixedDividend: 2,
+    parValue: 100,
+    lastDividend: 12,
+    price: 100,
+  };
+  const trades = [{
+    symbol: "AER",
+    type: "Common",
+    lastDividend: "-",
+    fixedDividend: "23",
+    parValue: 100,
+    price: "123",
+    quantity: "21"
+  }];
+  it("should take a snapshot", () => {
+    const { asFragment } = render(<table><tbody><StockRow stock={stock} trades={trades} index={0} setStockInStore={jest.fn()} /></tbody></table>)
+    expect(asFragment(<table><tbody><StockRow /></tbody></table>)).toMatchSnapshot()
+  });
+
+  it("should render row with valid 123123123data", async () => {
+    render(<table><tbody><StockRow stock={stock} trades={trades} index={0} setStockInStore={jest.fn()} /></tbody></table>)
+    expect(screen.getByTestId("stock-row-0")).toHaveTextContent("AERCommon122%100123.00BuySell")
+  });
+});
+
 describe("Stocks row function validation", () => {
   afterEach(cleanup);
   const stock01 = {

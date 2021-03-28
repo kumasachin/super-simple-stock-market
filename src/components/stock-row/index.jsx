@@ -9,11 +9,11 @@ import {
 
 export const StockRow = ({stock, trades, setStockInStore, handleTrade, index}) => {
     const {
-        symbol = "",
-        type = "-",
+        symbol,
+        type,
         lastDividend = "-",
         fixedDividend = "",
-        parValue = "-",
+        parValue,
         price,
         quantity = ""
     } = stock;
