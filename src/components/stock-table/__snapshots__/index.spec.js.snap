@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stocks should take a snapshot 1`] = `
+<DocumentFragment>
+  <h2
+    data-testid="stock-table-title"
+  >
+    Stocks
+  </h2>
+  <table
+    class="tableFormat"
+    data-testid="stock-table"
+  >
+    <thead
+      data-testid="stock-thead"
+    >
+      <tr
+        data-testid="stock-tr"
+      >
+        <th>
+          Stock Symbol
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Last Dividend
+        </th>
+        <th>
+          Fixed Dividend
+        </th>
+        <th>
+          Par Value
+        </th>
+        <th>
+          Price
+        </th>
+        <th
+          width="15%"
+        >
+          Dividend Yield
+        </th>
+        <th
+          width="15%"
+        >
+          P/E Ratio
+        </th>
+        <th
+          width="15%"
+        >
+          Volume Weighted Stock Price
+        </th>
+        <th>
+          Quantity
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</DocumentFragment>
+`;

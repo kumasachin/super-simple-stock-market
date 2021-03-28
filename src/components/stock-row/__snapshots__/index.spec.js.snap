@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stocks row snapshot testing should take a snapshot 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        data-testid="stock-row-0"
+      >
+        <td
+          data-testid="stock-symbol-0"
+        >
+          AER
+        </td>
+        <td
+          data-testid="stock-type-0"
+        >
+          Common
+        </td>
+        <td
+          data-testid="stock-lastdivident-0"
+        >
+          123
+        </td>
+        <td
+          data-testid="stock-fixeddividend-0"
+        >
+          -
+        </td>
+        <td
+          data-testid="stock-parvalue-0"
+        >
+          100
+        </td>
+        <td>
+          <input
+            data-testid="stock-price-0"
+            min="1"
+            name="price"
+            type="number"
+          />
+        </td>
+        <td
+          data-testid="stock-dividentyield-0"
+        />
+        <td
+          data-testid="stock-peratio-0"
+        />
+        <td
+          data-testid="stock-vwsprice-0"
+        >
+          123.00
+        </td>
+        <td>
+          <input
+            data-testid="stock-quantity-0"
+            min="1"
+            name="quantity"
+            type="number"
+            value="1"
+          />
+        </td>
+        <td
+          data-testid="stock-buysell-0"
+        >
+          <button
+            data-testid="stock-buy-0"
+            name="buy"
+          >
+            Buy
+          </button>
+          <br />
+          <br />
+          <button
+            data-testid="stock-sell-0"
+            name="sell"
+          >
+            Sell
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

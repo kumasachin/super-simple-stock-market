@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trades should take a snapshot 1`] = `
+<DocumentFragment>
+  <h2>
+    Trades
+  </h2>
+  <table
+    class="tableFormat"
+  >
+    <thead>
+      <tr>
+        <th>
+          Date
+        </th>
+        <th>
+          Stock Symbol
+        </th>
+        <th>
+          Quantity
+        </th>
+        <th>
+          Action
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Total Price
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</DocumentFragment>
+`;
